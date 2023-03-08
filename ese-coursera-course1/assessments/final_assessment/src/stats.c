@@ -14,30 +14,31 @@
                                200, 122, 150, 90,   92,  87, 177, 244,
                                201,   6,  12,  60,   8,   2,   5,  67,
                                  7,  87, 250, 230,  99,   3, 100,  90,};
+  
+struct stats
+{
+    unsigned int min,max,mean,median;
+};
+
+
+int main(void)
+{
+  Array.numArray = test;
+  Array.arrayLength = SIZE;
+  Array.max = 0;
+  Array.min = 0xFF;
+  Array.mean = 0;
+  Array.median = 0;
+  }
+{ 
+   sort_array(Array.numArray, Array.arrayLength);
+   Array.min = find_min(Array.numArray, Array.arrayLength);
+   Array.max = find_max(Array.numArray, Array.arrayLength);
+   Array.mean = find_mean(Array.numArray, Array.arrayLength);
+   Array.median = find_median(Array.numArray, Array.arrayLength);
+   print_array(Array.numArray, Array.arrayLength);
+   print_statistics(Array);
  }
-//   /* Other Variable Declarations Go Here */
-//   /* Statistics and Printing Functions Go Here */
-
-//   // Create Struct
-// stat Array;
-
-//   // Initialize Struct
-//   Array.numArray = test;
-//   Array.arrayLength = SIZE;
-//   Array.max = 0;
-//   Array.min = 0xFF;
-//   Array.mean = 0;
-//   Array.median = 0;
-
-//   // Process Data
-//   sort_array(Array.numArray, Array.arrayLength);
-//   Array.min = find_min(Array.numArray, Array.arrayLength);
-//   Array.max = find_max(Array.numArray, Array.arrayLength);
-//   Array.mean = find_mean(Array.numArray, Array.arrayLength);
-//   Array.median = find_median(Array.numArray, Array.arrayLength);
-//   print_array(Array.numArray, Array.arrayLength);
-//   print_statistics(Array);
-// }
 
 void print_statistics(uint8_t *arrayPtr, uint8_t arrayLength){
     print_array(arrayPtr, arrayLength);
