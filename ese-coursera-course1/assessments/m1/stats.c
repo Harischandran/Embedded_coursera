@@ -29,7 +29,8 @@
 
 void main() {
 
-  int compare(const void *a, const void *b) {
+  int compare(const void *a, const void *b)
+   {
     unsigned char x = *(unsigned char*)a;
     unsigned char y = *(unsigned char*)b;
     return y - x;
